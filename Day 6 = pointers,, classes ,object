@@ -1,0 +1,191 @@
+// problem no. 1
+count price of per cofee
+
+#include <iostream>
+using namespace std;
+int cofeecount(int cofee){
+    return cofee*50;
+}
+int main(){
+    int c;
+    cout << "enter the no.of cofee",c;
+    cin >> c;
+    cout << cofeecount(c);
+}
+
+
+// problem no. 2
+giving 10% discount
+
+#include<iostream>
+using namespace std;
+
+float countdiscount(float amount){
+    return amount*0.10;
+}
+
+int main(){
+
+    int Discount;
+    cout <<"enter total amount",Discount;
+    cin>>Discount;
+    cout<<countdiscount(Discount);
+}
+
+
+// Program --3 
+// Smart AC remote 
+// 1. Turn on -- 22°C
+// 2. Input -- 20.5 -- Temprature set -- 20.5°C
+// 3. Input. -- ECO -- Temprature set -- 24°C
+// 4. Input. -- Turbo -- Temprature set -- 18°C
+
+
+#include<iostream>
+using namespace std;
+void setTemprature(){
+    cout << "Temprature Set to 22°C" << "\n";
+}
+
+void setTemprature(double temp){
+    cout << "Temprature Set to " << temp << " °C" << "\n";
+}
+
+void setTemprature(string mode){
+    if(mode == "ECO"){
+        cout << "Temprature Set to 24 °C" << "\n";
+    } else if (mode == "TURBO"){
+        cout << "Temprature Set to 18 °C" << "\n";
+    }
+}
+int main() {
+    setTemprature();
+    setTemprature(20.5);
+    setTemprature("ECO");
+}
+
+
+
+// pointers ===================================================================
+// problem no. 4
+// declaration , initialisation, arithematic operation through pointer
+
+
+
+#include <iostream>
+using namespace std;
+
+int main() {
+
+    int a = 10;
+    int* ptr1 = &a;
+
+    int b = 20;
+    int* ptr2 = &b;
+
+    int c = *ptr1 + *ptr2;
+
+    cout << c;
+
+}
+
+
+// problem no. 5
+// swapping of 2 variables value using pointers and using function
+#include<iostream>
+using namespace std;
+
+void swapnumber(int*ptr1 , int*ptr2){
+    int temp= *ptr1;
+    *ptr1=*ptr2;
+    *ptr2=temp;
+
+}
+int main(){
+    int a,b;
+    cin>>a;
+    cin>>b;
+    swapnumber(&a,&b);
+    cout <<a<<" "<< b;
+}
+
+
+// problem no.6
+
+// class / objects
+#include <iostream>
+using namespace std;
+class student
+{
+public:
+    string name;
+    int age;
+
+    void introduce()
+    {
+        cout << " hi there, person name is " << name << " and his age is" << age << "\n";
+    }
+};
+
+int main()
+{
+    student s1, s2;
+    s1.name= "Abhishek";
+    s1.age=24;
+    s2.name="Rahul";
+    s2.age=25;
+    s1.introduce();
+    s2.introduce();
+    
+}
+
+
+// problem no.7
+
+// class / objects
+ input age from user
+,name
+
+#include <iostream>
+using namespace std;
+class student
+{
+public:
+    string name;
+    int age;
+
+    void introduce()
+    {
+        cout << " hi there, person name is " << name << " and his age is" << age << "\n";
+    }
+};
+
+int main()
+{
+    student s1, s2;
+    s1.name= "Abhishek";
+    cout << "enter the user age", s1,s2;
+    cin >> s1.age;
+    cin >> s2.age;
+    s2.name="Rahul";
+    s2.age;
+    s1.introduce();
+    s2.introduce();
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
