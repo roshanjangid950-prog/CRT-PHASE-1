@@ -1,0 +1,207 @@
+// problem no. 1
+// call by value , call by refrence====
+//call by value==  change avalue like a photocopy
+// call by refrence== change value directly in the rogram
+
+
+#include <iostream>
+using namespace std;
+
+void updatebyvalue(int a)
+{
+    a = 500;
+}
+void updatebyrefrece(int &a)
+{
+    a = 50;
+}
+int main()
+{
+    int original = 100;
+    updatebyvalue(original);
+    cout << original << "\n";
+    updatebyrefrece(original);
+    cout << original;
+}
+
+
+
+// problem no. 2
+// acess specifier
+// private
+
+# include<iostream>
+using namespace std;
+
+class bankaccount{
+private:
+    int balance= 5999;
+
+public:
+void showbalance(){
+    cout<< balance;
+}
+};
+int main(){
+    bankaccount obj1;
+   
+    obj1.showbalance();
+}
+
+
+
+
+// problem no. 3
+// acess specifier = protected
+
+# include<iostream>
+using namespace std;
+
+
+class parent {
+    protected:
+    int secretcode = 1552;
+
+};
+class child : public parent{
+public:
+    void accesslocker(){
+        cout << secretcode;
+    }
+};
+int main(){
+    child obj1;
+    obj1.accesslocker();
+}
+
+
+
+// problem no. 4
+// constructor==
+// parameterized
+
+#include <iostream>
+using namespace std;
+
+class student
+{
+
+public:
+    string name;
+    int age;
+    student(string studentname, int studentage)
+    {
+        name = studentname;
+        age = studentage;
+    }
+    void introduce()
+    {
+        cout << "hi there, this person name is " <<name << " and his age is" << age << "\n";
+    }
+};
+int main()
+{
+    student s1("Abhishek", 24);
+    s1.introduce();
+}
+
+
+// problem no. 5
+// constructor==
+//  default
+
+
+#include <iostream>
+using namespace std;
+
+class wificonnection
+{
+public:
+    string networkname;
+    int password;
+
+    wificonnection()
+    {
+        networkname = " ACt fiber net";
+        password = 1234;
+    }
+    void showdetails()
+    {
+        cout << networkname << " " << password;
+    }
+};
+int main()
+{
+    wificonnection obj1;
+    obj1.showdetails();
+}
+
+
+
+// problem no. 6
+// constructor==
+// constructor overloading
+#include <iostream>
+using namespace std;
+
+class Rectangle
+{
+public:
+    int length;
+    int width;
+    // constructor --1 (default constructor)
+    Rectangle()
+    {
+        length = 10;
+        width = 20;
+    }
+    // constructor--2 (parameterized constructor)
+    Rectangle(int l)
+    {
+        width = 20;
+    }
+    // constructor--3 (parameterized constructor)
+    Rectangle(int l, int b)
+    {
+        length = l;
+        width = b;
+    }
+    void area()
+    {
+        cout << length * width;
+    }
+};
+int main()
+{
+    Rectangle r1;
+    r1.area();
+    Rectangle r2(5);
+    r2.area();
+    Rectangle r3(5, 10);
+    r3.area();
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
