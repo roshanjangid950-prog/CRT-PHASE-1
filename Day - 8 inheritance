@@ -1,0 +1,226 @@
+// inheritance == code redundancy low, readiblity increase, mentainlablity increase
+// single inheritance
+// multileval
+// herarichal
+// multiple
+// hybrid
+
+// problem no. 1
+// single 
+
+# include <iostream>
+using namespace std;
+
+class vehicle{
+public:
+    void start(){
+        cout <<"vehicle starts" << "\n";
+    }
+};
+
+class car : public vehicle{
+public:
+    void drive(){
+        cout <<" car is running "<<"\n";
+    }
+};
+
+int main(){
+
+    car obj1;
+    vehicle obj2;
+    obj2.start();
+    
+}
+
+
+
+// problem no. 2
+// multileval
+
+
+
+#include<iostream>
+using namespace std;
+
+class Vehicle {
+public:    
+    void start() {
+        cout <<"Vehicle starts" <<"\n";
+    }
+};
+
+class Car : public Vehicle {
+public:
+    void drive() {
+        cout << "Car is running" << "\n";
+    }
+};
+
+class speedOMeter : public Car {
+public:
+    void speed() {
+        cout << "Car is running at 60km/h" <<"\n";
+    }
+};
+
+int main() {
+    speedOMeter obj1;
+    obj1.start();
+    obj1.drive();
+    obj1.speed();
+}
+
+
+
+
+
+// problem no. 3
+
+// hierarchical
+
+#include<iostream>
+using namespace std;
+
+class Vehicle {
+public:    
+    void start() {
+        cout <<"Vehicle starts" <<"\n";
+    }
+};
+
+class bike : public Vehicle {
+public:
+    void ride() {
+        cout << "bike is running" << "\n";
+    }
+};
+
+class car :  public Vehicle {
+public:
+    void drive() {
+        cout << "Car is running " <<"\n";
+    }
+};
+
+int main() {
+    car c;
+    bike b;
+    c.start();
+    c.drive();
+    b.start();
+    b.ride();
+
+
+}    
+
+
+
+// problem no. 4
+// multiple
+//error vala program
+
+
+#include<iostream>
+using namespace std;
+
+class parent1 {
+public:    
+    void frommummy() {
+        cout <<"mummy pese dedo" <<"\n";
+    }
+};
+
+class parent2  {
+public:
+    void frompapa() {
+        cout << "papa pese dedo" << "\n";
+    }
+};
+
+class child :  public parent1,public parent2 {
+public:
+    void drive() {
+        cout << "Car is running " <<"\n";
+    }
+};
+
+int main() {
+    child c;
+    
+    
+}    
+
+
+
+
+// problem no. 5
+// hybrid
+//dimond square
+#include<iostream>
+using namespace std;
+
+class a{
+public:
+    void show(){
+        cout <<"hi there..";
+    }  
+
+};
+class b : virtual public a{
+    // no logic
+};
+
+class c : virtual public a{
+    // no logic
+};
+
+class d : public b , public c{
+    //no logic
+};
+
+int main(){
+    d obj1;
+    obj1.show();
+
+}
+
+
+
+
+// problem no. 6
+// Encapsulation
+
+
+#include<iostream>
+using namespace std;
+
+class bankaccount{
+private:    
+    int bankbalance;
+public:
+    void setbalance(int amount){// setter
+        if (amount >=0){
+            bankbalance = amount;
+        }else{
+            cout << " enter a valid amount";
+        }
+    }
+    int getbalance(){ // getter
+        return bankbalance;
+    }
+};
+
+int main(){
+    bankaccount obj1;
+    obj1. setbalance(50000);
+    cout << obj1.getbalance();
+}
+
+
+// 2 polymorphism==
+
+
+
+
+
